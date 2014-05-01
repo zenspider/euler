@@ -1,3 +1,5 @@
+require "maffs"
+
 # Euler #125:
 
 def euler125 max
@@ -13,12 +15,10 @@ end
 # Find the sum of all the numbers less than 10^8 that are both
 # palindromic and can be written as the sum of consecutive squares.
 
-# p euler125(10**3) == 4164
-#
-# p euler125(10**4)
-# p euler125(10**5)
-# p euler125(10**6)
-# p euler125(10**7)
-# p euler125 10**8
+p euler125(10**3) == 4164
 
-# Euler #341:
+p euler125(10**4)
+p euler125(10**5)
+p euler125(10**6)
+p euler125(10**7)
+p euler125 10**8

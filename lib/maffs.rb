@@ -140,3 +140,35 @@ class Array
     result
   end
 end
+
+TriangleNode = Struct.new :n, :l, :r, :m do
+  def self.compute t
+    t.each_with_index { |row, i|
+      row.each_with_index { |node, j|
+        node.r = t[i+1][j+1] rescue nil
+        node.l = t[i+1][j+0] rescue nil
+      }
+    }
+
+    t.reverse.each do |row|
+      row.each do |node|
+        max = if node.l then
+                if node.l.m >= node.r.m then
+                  node.l.m
+                else
+                  node.r.m
+                end
+              else
+                0
+              end
+        node.m = node.n + max
+      end
+    end
+
+    t[0][0].m # => 1074
+  end
+
+  def inspect
+    "n(#{n}, #{m})"
+  end
+end

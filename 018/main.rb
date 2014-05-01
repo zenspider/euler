@@ -1,3 +1,5 @@
+require "maffs"
+
 # Euler #18:
 
 triangle = <<-TRIANGLE
@@ -18,40 +20,8 @@ triangle = <<-TRIANGLE
 04  62  98  27  23  09  70  98  73  93  38  53  60  04  23
 TRIANGLE
 
-node = Struct.new :n, :l, :r, :m do
-  def self.compute t
-    t.each_with_index { |row, i|
-      row.each_with_index { |node, j|
-        node.r = t[i+1][j+1] rescue nil
-        node.l = t[i+1][j+0] rescue nil
-      }
-    }
-
-    t.reverse.each do |row|
-      row.each do |node|
-        max = if node.l then
-                if node.l.m >= node.r.m then
-                  node.l.m
-                else
-                  node.r.m
-                end
-              else
-                0
-              end
-        node.m = node.n + max
-      end
-    end
-
-    t[0][0].m # => 1074
-  end
-
-  def inspect
-    "n(#{n}, #{m})"
-  end
-end
-
 triangle = triangle.split(/\n/).map { |l|
-  l.scan(/\d+/).map { |s| node.new s.to_i }
+  l.scan(/\d+/).map { |s| TriangleNode.new s.to_i }
 }
 
-p node.compute triangle
+p TriangleNode.compute triangle
