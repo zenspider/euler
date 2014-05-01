@@ -1,0 +1,150 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4453,        140]
+NotebookOptionsPosition[      3872,        114]
+NotebookOutlinePosition[      4228,        130]
+CellTagsIndexPosition[      4185,        127]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 204", "Section",
+ CellChangeTimes->{
+  3.53082773044563*^9, {3.530827780536021*^9, 3.5308278112139683`*^9}, {
+   3.530828168456216*^9, 3.5308281799103823`*^9}, {3.530828598820354*^9, 
+   3.530828737824876*^9}, {3.5315460042336483`*^9, 3.5315460967150173`*^9}, {
+   3.531546410774343*^9, 3.5315464562157927`*^9}, {3.53215071713129*^9, 
+   3.5321507379917383`*^9}, {3.532151642575706*^9, 3.532151656848378*^9}, 
+   3.532155954200289*^9, {3.532221754385334*^9, 3.532221766335903*^9}}],
+
+Cell["\<\
+
+A Hamming number is a positive number which has no prime factor larger than \
+5.
+So the first few Hamming numbers are 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15.
+There are 1105 Hamming numbers not exceeding 108.
+
+We will call a positive number a generalised Hamming number of type n, if it \
+has no prime factor larger than n.
+Hence the Hamming numbers are the generalised Hamming numbers of type 5.
+
+How many generalised Hamming numbers of type 100 are there which don't exceed \
+10^9?\
+\>", "Text",
+ CellChangeTimes->{
+  3.53082773044563*^9, {3.530827780536021*^9, 3.5308278112139683`*^9}, {
+   3.530828168456216*^9, 3.5308281799103823`*^9}, {3.530828598820354*^9, 
+   3.530828737824876*^9}, {3.5315460042336483`*^9, 3.5315460967150173`*^9}, {
+   3.531546410774343*^9, 3.5315464562157927`*^9}, {3.53215071713129*^9, 
+   3.5321507379917383`*^9}, {3.532151642575706*^9, 3.532151656848378*^9}, 
+   3.532155954200289*^9, {3.532221754385334*^9, 3.532221764904008*^9}, 
+   3.5350499865709963`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"primesBelow", "@", "15"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"10", "^", "3"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Max", "[", 
+       RowBox[{"First", "/@", 
+        RowBox[{"FactorInteger", "[", "#", "]"}]}], "]"}], "<=", "5"}], 
+     "&"}]}], "]"}], "//", "Length"}]}], "Input",
+ CellChangeTimes->{{3.535049990854403*^9, 3.535050038987625*^9}, {
+  3.5350500871362143`*^9, 3.535050111546734*^9}, {3.535050162841434*^9, 
+  3.535050163821567*^9}}],
+
+Cell[BoxData["86"], "Output",
+ CellChangeTimes->{{3.535050097672217*^9, 3.535050111823473*^9}, 
+   3.535050164062261*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"primesBelow", "@", "15"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Monitor", "[", 
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"Boole", "[", 
+       RowBox[{
+        RowBox[{"Max", "[", 
+         RowBox[{"First", "/@", 
+          RowBox[{"FactorInteger", "[", "i", "]"}]}], "]"}], "\[LessEqual]", 
+        "100"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"10", "^", "9"}]}], "}"}]}], "]"}], ",", "i"}], "]"}], "//", 
+  "Timing"}]}], "Input",
+ CellChangeTimes->{{3.535049990854403*^9, 3.535050038987625*^9}, {
+   3.5350500871362143`*^9, 3.535050191191832*^9}, 3.535050224454956*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"13.288377999999966`", ",", "72271"}], "}"}]], "Output",
+ CellChangeTimes->{{3.535050161173912*^9, 3.535050205160748*^9}}]
+}, Open  ]],
+
+Cell[BoxData["hamming"], "Input",
+ CellChangeTimes->{{3.535050230999392*^9, 3.535050231524547*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{260, Automatic}, {Automatic, 44}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 495, 7, 67, "Section"],
+Cell[1077, 31, 996, 21, 146, "Text"],
+Cell[CellGroupData[{
+Cell[2098, 56, 610, 17, 43, "Input"],
+Cell[2711, 75, 121, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2869, 82, 709, 20, 58, "Input"],
+Cell[3581, 104, 161, 3, 27, "Output"]
+}, Open  ]],
+Cell[3757, 110, 99, 1, 27, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,158 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4280,        148]
+NotebookOptionsPosition[      3736,        123]
+NotebookOutlinePosition[      4091,        139]
+CellTagsIndexPosition[      4048,        136]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 120", "Section",
+ CellChangeTimes->{
+  3.53082773044563*^9, {3.530827780536021*^9, 3.5308278112139683`*^9}, {
+   3.530828168456216*^9, 3.5308281799103823`*^9}, {3.530828598820354*^9, 
+   3.530828737824876*^9}, {3.5315460042336483`*^9, 3.5315460967150173`*^9}, {
+   3.531546410774343*^9, 3.5315464562157927`*^9}, 3.53215071713129*^9, {
+   3.532151878098098*^9, 3.532151885985372*^9}, {3.532222412541945*^9, 
+   3.532222421194623*^9}}],
+
+Cell[TextData[{
+ "\nLet r be the remainder when ",
+ Cell[BoxData[
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"a", "-", "1"}], ")"}], "n"], "+", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"a", "+", "1"}], ")"}], "n"]}]]],
+ " is divided by ",
+ Cell[BoxData[
+  SuperscriptBox["a", "2"]]],
+ ".\n\nFor example, if a = 7 and n = 3, then r = 42: ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["6", "3"], "+", 
+    SuperscriptBox["8", "3"]}], "=", 
+   RowBox[{"728", "\[Congruent]", 
+    RowBox[{"42", " ", "mod", " ", "49"}]}]}]]],
+ ". And as n varies, so too will r, but for a = 7 it turns out that ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["r", "max"], "=", "42"}]]],
+ ".\n\nFor ",
+ Cell[BoxData[
+  RowBox[{"3", "\[LessEqual]", "a", "\[LessEqual]", "1000"}]]],
+ ", find ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["r", "max"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{
+  3.53082773044563*^9, {3.530827780536021*^9, 3.5308278112139683`*^9}, {
+   3.530828168456216*^9, 3.5308281799103823`*^9}, {3.530828598820354*^9, 
+   3.530828737824876*^9}, {3.5315460042336483`*^9, 3.5315460967150173`*^9}, {
+   3.531546410774343*^9, 3.5315464562157927`*^9}, 3.53215071713129*^9, {
+   3.532151878098098*^9, 3.532151885985372*^9}, {3.532222412541945*^9, 
+   3.532222452170664*^9}, {3.5322225466749353`*^9, 3.5322225962741213`*^9}, {
+   3.532222654259467*^9, 3.532222704158836*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "=", 
+  RowBox[{"Mod", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"a", "-", "1"}], ")"}], "n"], "+", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"a", "+", "1"}], ")"}], "n"]}], ",", 
+    SuperscriptBox["a", "2"]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.532222488500478*^9, 3.5322225083125753`*^9}, {
+  3.532222738036022*^9, 3.532222738714539*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Mod", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "a"}], ")"}], "n"], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", "a"}], ")"}], "n"]}], ",", 
+   SuperscriptBox["a", "2"]}], "]"}]], "Output",
+ CellChangeTimes->{{3.5322224986105947`*^9, 3.532222509327923*^9}, 
+   3.532222739989542*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "\[Rule]", "7"}], ",", 
+    RowBox[{"n", "\[Rule]", "3"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.532222716802822*^9, 3.53222272391433*^9}}],
+
+Cell[BoxData["42"], "Output",
+ CellChangeTimes->{{3.5322227250526333`*^9, 3.532222742300111*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{28, Automatic}, {36, Automatic}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 447, 7, 67, "Section"],
+Cell[1029, 31, 1451, 42, 122, "Text"],
+Cell[CellGroupData[{
+Cell[2505, 77, 435, 13, 33, "Input"],
+Cell[2943, 92, 404, 13, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3384, 110, 224, 6, 27, "Input"],
+Cell[3611, 118, 97, 1, 27, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4962,        161]
+NotebookOptionsPosition[      4310,        132]
+NotebookOutlinePosition[      4664,        148]
+CellTagsIndexPosition[      4621,        145]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 112", "Section",
+ CellChangeTimes->{
+  3.53082773044563*^9, {3.530827780536021*^9, 3.5308278112139683`*^9}, {
+   3.530828168456216*^9, 3.5308281799103823`*^9}, {3.530828598820354*^9, 
+   3.530828737824876*^9}, {3.5315460042336483`*^9, 3.5315460967150173`*^9}, {
+   3.531546410774343*^9, 3.5315464562157927`*^9}, 3.53215071713129*^9, {
+   3.532151878098098*^9, 3.5321518797293053`*^9}}],
+
+Cell["\<\
+
+Working from left-to-right if no digit is exceeded by the digit to its left \
+it is called an increasing number; for example, 134468.
+
+Similarly if no digit is exceeded by the digit to its right it is called a \
+decreasing number; for example, 66420.
+
+We shall call a positive integer that is neither increasing nor decreasing a \
+\"bouncy\" number; for example, 155349.
+
+Clearly there cannot be any bouncy numbers below one-hundred, but just over \
+half of the numbers below one-thousand (525) are bouncy. In fact, the least \
+number for which the proportion of bouncy numbers first reaches 50% is 538.
+
+Surprisingly, bouncy numbers become more and more common and by the time we \
+reach 21780 the proportion of bouncy numbers is equal to 90%.
+
+Find the least number for which the proportion of bouncy numbers is exactly \
+99%.\
+\>", "Text",
+ CellChangeTimes->{
+  3.53082773044563*^9, {3.530827780536021*^9, 3.5308278112139683`*^9}, {
+   3.530828168456216*^9, 3.5308281799103823`*^9}, {3.530828598820354*^9, 
+   3.530828737824876*^9}, {3.5315460042336483`*^9, 3.5315460967150173`*^9}, {
+   3.531546410774343*^9, 3.5315464562157927`*^9}, 3.53215071713129*^9, {
+   3.532151878098098*^9, 3.53215188364174*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"bouncy", "[", "n_", "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", "=", 
+      RowBox[{"IntegerDigits", "[", "n", "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"s", "=", 
+        RowBox[{"Sort", "@", "a"}]}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"a", "\[NotEqual]", "s"}], "&&", 
+       RowBox[{"a", "\[NotEqual]", 
+        RowBox[{"Reverse", "@", "s"}]}]}]}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"bounceUntil", "[", "p_", "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"c", "=", "0"}], ",", 
+      RowBox[{"n", "=", "99"}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        FractionBox["c", "n"], "<", "p"}], ",", 
+       RowBox[{
+        RowBox[{"n", "++"}], ";", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"bouncy", "[", "n", "]"}], ",", 
+          RowBox[{"c", "++"}]}], "]"}]}]}], "]"}], ";", "n"}]}], 
+   "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"bounceUntil", "[", 
+   FractionBox["1", "2"], "]"}], "\[Equal]", "538"}]}], "Input",
+ CellChangeTimes->{{3.5321517135031233`*^9, 3.532151788974114*^9}, {
+   3.532151913540159*^9, 3.532151914017333*^9}, 3.53215338714152*^9}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.532153389222398*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"bounceUntil", "[", 
+   FractionBox["9", "10"], "]"}], "\[Equal]", "21780"}]], "Input",
+ CellChangeTimes->{{3.532153395926338*^9, 3.5321534185952263`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.5321534102211227`*^9, 3.532153419510927*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bounceUntil", "[", 
+  FractionBox["99", "100"], "]"}]], "Input",
+ CellChangeTimes->{{3.53215343049858*^9, 3.532153431890636*^9}}],
+
+Cell[BoxData["1587000"], "Output",
+ CellChangeTimes->{3.5321534701234617`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{52, Automatic}, {Automatic, 4}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 399, 6, 67, "Section"],
+Cell[981, 30, 1219, 26, 221, "Text"],
+Cell[CellGroupData[{
+Cell[2225, 60, 1382, 42, 125, "Input"],
+Cell[3610, 104, 73, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3720, 110, 189, 4, 47, "Input"],
+Cell[3912, 116, 99, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4048, 122, 153, 3, 47, "Input"],
+Cell[4204, 127, 78, 1, 27, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
