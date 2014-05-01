@@ -115,7 +115,7 @@ end
 
 class String
   def euler22
-    self.split(//).map { |s| s[0] - ?@ }.sum || 0
+    self.split(//).map { |s| s[0].ord - ?@.ord }.sum || 0
   end
 end
 
