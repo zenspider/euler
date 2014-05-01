@@ -9,7 +9,7 @@ Dir["???"].each do |f|
       when /\.rb$/ then
         task f do
           out = "#{f}/output.txt"
-          unless File.file? out then
+          if not File.file?(out) or (File.mtime(out) < File.mtime(script)) then
             sh "(time ruby -Ilib #{script}) 2>&1 | tee #{out}"
           end
         end
