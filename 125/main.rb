@@ -17,8 +17,10 @@ end
 
 p euler125(10**3) == 4164
 
-p euler125(10**4)
-p euler125(10**5)
-p euler125(10**6)
-p euler125(10**7)
-p euler125 10**8
+# p euler125(10**4)
+# p euler125(10**5)
+# p euler125(10**6)
+# p euler125(10**7)
+# p euler125 10**8
+
+warn "TODO slow run punted..."
