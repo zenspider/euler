@@ -1,3 +1,5 @@
+require "maffs"
+
 # Euler #15:
 # How many routes are there through a 20x20 grid?
 # (how many leaf nodes through a balanced binary tree 20 nodes deep?)
@@ -17,6 +19,5 @@ def euler15 n
   pascal((2*n), n)
 end
 
-# p (1..8).map { |n| euler15 n } # => [2, 6, 20, 70, 252]
-# euler15 20                   # => 137846528820
-
+p (1..8).map { |n| euler15 n } # => [2, 6, 20, 70, 252]
+euler15 20                   # => 137846528820

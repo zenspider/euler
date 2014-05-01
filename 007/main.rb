@@ -1,3 +1,5 @@
-# Euler #7:
-# p 1_000_000.primes[10000]
+require "maffs"
 
+# Euler #7:
+
+p 1_000_000.primes[10000]
