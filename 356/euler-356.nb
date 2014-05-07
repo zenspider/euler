@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     51217,       1497]
-NotebookOptionsPosition[     47817,       1403]
-NotebookOutlinePosition[     48170,       1419]
-CellTagsIndexPosition[     48127,       1416]
+NotebookDataLength[     51957,       1512]
+NotebookOptionsPosition[     48438,       1416]
+NotebookOutlinePosition[     48870,       1433]
+CellTagsIndexPosition[     48827,       1430]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -119,7 +119,8 @@ Cell[BoxData[{
 Cell[BoxData["3.8661982625090228`"], "Output",
  CellChangeTimes->{{3.530575611378113*^9, 3.530575616521289*^9}, 
    3.5305757527302837`*^9, 3.5305758077690353`*^9, 3.5305759118363323`*^9, 
-   3.530606235994238*^9, 3.530699828368232*^9, 3.530699917432912*^9}]
+   3.530606235994238*^9, 3.530699828368232*^9, 3.530699917432912*^9, 
+   3.608485910099235*^9, 3.608486177434915*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -130,31 +131,47 @@ Cell[BoxData[
 
 Cell[BoxData["1.`"], "Output",
  CellChangeTimes->{3.530579914750907*^9, 3.530606236153475*^9, 
-  3.530699828406117*^9, 3.530699917484147*^9}]
+  3.530699828406117*^9, 3.530699917484147*^9, 3.608485926981779*^9}]
 }, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Monitor", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Floor", "[", 
+      SuperscriptBox[
+       RowBox[{"a", "[", "n", "]"}], "q"], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "30"}], "}"}]}], "]"}], ",", "n"}], "]"}]], "Input",
+ CellChangeTimes->{{3.608485932039937*^9, 3.608485967591097*^9}, {
+   3.608486012646698*^9, 3.60848602855798*^9}, 3.608486195372224*^9}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Mod", "[", 
+ RowBox[{"Monitor", "[", 
   RowBox[{
-   RowBox[{
-    UnderoverscriptBox["\[Sum]", "n", "30"], 
-    RowBox[{"PowerMod", "[", 
+   RowBox[{"Mod", "[", 
+    RowBox[{
      RowBox[{
-      RowBox[{"Floor", "[", 
-       RowBox[{"a", "[", "n", "]"}], "]"}], ",", "q", ",", 
-      SuperscriptBox["10", "8"]}], "]"}]}], ",", 
-   SuperscriptBox["10", "8"]}], "]"}]], "Input",
+      UnderoverscriptBox["\[Sum]", "n", "30"], 
+      RowBox[{"PowerMod", "[", 
+       RowBox[{
+        RowBox[{"Floor", "[", 
+         RowBox[{"a", "[", "n", "]"}], "]"}], ",", "q", ",", 
+        SuperscriptBox["10", "8"]}], "]"}]}], ",", 
+     SuperscriptBox["10", "8"]}], "]"}], ",", "n"}], "]"}]], "Input",
  CellChangeTimes->{{3.530575154807238*^9, 3.530575235509156*^9}, {
   3.5305757129400167`*^9, 3.530575731800981*^9}, {3.530575778041007*^9, 
-  3.5305757820490837`*^9}}],
+  3.5305757820490837`*^9}, {3.608486147202743*^9, 3.608486156692143*^9}}],
 
 Cell[BoxData["63482027"], "Output",
  CellChangeTimes->{{3.530575202897439*^9, 3.530575211882619*^9}, 
    3.530575256876343*^9, {3.530575713901204*^9, 3.530575809621459*^9}, 
    3.530575911875144*^9, {3.530579997551078*^9, 3.530580011481037*^9}, 
-   3.530606236206317*^9, 3.530699828450356*^9, 3.530699917534779*^9}]
+   3.530606236206317*^9, 3.530699828450356*^9, 3.530699917534779*^9, {
+   3.608486162095181*^9, 3.608486181609449*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -910,9 +927,8 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "ovfl"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Overflow occurred in computation. \\!\\(\\*ButtonBox[\\\"\
+   RowBox[{"General", "::", "ovfl"}], "MessageName"], ":", 
+  " ", "\<\"Overflow occurred in computation. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
@@ -922,9 +938,8 @@ ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "ovfl"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Overflow occurred in computation. \\!\\(\\*ButtonBox[\\\"\
+   RowBox[{"General", "::", "ovfl"}], "MessageName"], ":", 
+  " ", "\<\"Overflow occurred in computation. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
@@ -934,9 +949,8 @@ ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "ovfl"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Overflow occurred in computation. \\!\\(\\*ButtonBox[\\\"\
+   RowBox[{"General", "::", "ovfl"}], "MessageName"], ":", 
+  " ", "\<\"Overflow occurred in computation. \\!\\(\\*ButtonBox[\\\"\
 \[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 \\\"General::ovfl\\\"]\\)\"\>"}]], "Message", "MSG",
@@ -946,10 +960,9 @@ ButtonData:>\\\"paclet:ref/message/General/ovfl\\\", ButtonNote -> \
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(General \
-:: ovfl\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(General :: \
+ovfl\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
 calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
@@ -1401,10 +1414,11 @@ Cell[BoxData["1.23343371298165049042187866640855160387`15.954589770191005*^\
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{652, 752},
+WindowSize->{852, 837},
 WindowMargins->{{5, Automatic}, {Automatic, 0}},
-FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
-2011)",
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -1419,82 +1433,83 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 106, 1, 76, "Title"],
-Cell[688, 25, 1164, 35, 148, "Text"],
-Cell[1855, 62, 428, 7, 27, "Input",
+Cell[579, 22, 106, 1, 92, "Title"],
+Cell[688, 25, 1164, 35, 165, "Text"],
+Cell[1855, 62, 428, 7, 28, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[2286, 71, 145, 3, 27, "Input"],
-Cell[2434, 76, 620, 13, 30, "Input"],
+Cell[2286, 71, 145, 3, 28, "Input"],
+Cell[2434, 76, 620, 13, 32, "Input"],
 Cell[CellGroupData[{
-Cell[3079, 93, 1101, 23, 49, "Input"],
-Cell[4183, 118, 258, 3, 27, "Output"]
+Cell[3079, 93, 1101, 23, 52, "Input"],
+Cell[4183, 118, 306, 4, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4478, 126, 120, 2, 27, "Input"],
-Cell[4601, 130, 141, 2, 27, "Output"]
+Cell[4526, 127, 120, 2, 28, "Input"],
+Cell[4649, 131, 163, 2, 28, "Output"]
+}, Open  ]],
+Cell[4827, 136, 428, 11, 35, "Input"],
+Cell[CellGroupData[{
+Cell[5280, 151, 626, 15, 57, "Input"],
+Cell[5909, 168, 365, 5, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4779, 137, 504, 13, 55, "Input"],
-Cell[5286, 152, 315, 4, 27, "Output"]
+Cell[6311, 178, 385, 8, 57, "Input"],
+Cell[6699, 188, 2594, 61, 164, "Output"]
+}, Open  ]],
+Cell[9308, 252, 760, 21, 80, "Input"],
+Cell[10071, 275, 403, 10, 28, "Input"],
+Cell[CellGroupData[{
+Cell[10499, 289, 808, 16, 35, "Input"],
+Cell[11310, 307, 16237, 501, 913, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5638, 161, 385, 8, 55, "Input"],
-Cell[6026, 171, 2594, 61, 193, "Output"]
-}, Open  ]],
-Cell[8635, 235, 760, 21, 88, "Input"],
-Cell[9398, 258, 403, 10, 27, "Input"],
+Cell[27584, 813, 93, 1, 80, "Section"],
 Cell[CellGroupData[{
-Cell[9826, 272, 808, 16, 33, "Input"],
-Cell[10637, 290, 16237, 501, 955, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[26911, 796, 93, 1, 67, "Section"],
-Cell[CellGroupData[{
-Cell[27029, 801, 307, 8, 55, "Input",
+Cell[27702, 818, 307, 8, 55, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[27339, 811, 1955, 63, 67, "Output",
+Cell[28012, 828, 1955, 63, 67, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[29297, 876, 414, 9, 27, "Input",
+Cell[29970, 893, 414, 9, 27, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[29714, 887, 858, 20, 33, "Input",
+Cell[30387, 904, 858, 20, 33, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[30575, 909, 487, 10, 23, "Message",
+Cell[31248, 926, 474, 9, 23, "Message",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[31065, 921, 490, 10, 23, "Message",
+Cell[31725, 937, 477, 9, 23, "Message",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[31558, 933, 490, 10, 23, "Message",
+Cell[32205, 948, 477, 9, 23, "Message",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[32051, 945, 605, 12, 23, "Message",
+Cell[32685, 959, 592, 11, 23, "Message",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[32659, 959, 979, 28, 153, "Output",
+Cell[33280, 972, 979, 28, 153, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[33641, 989, 325, 6, 27, "Input",
+Cell[34262, 1002, 325, 6, 27, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[33969, 997, 2026, 64, 73, "Output",
+Cell[34590, 1010, 2026, 64, 73, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[35998, 1063, 565, 16, 33, "Input",
+Cell[36619, 1076, 565, 16, 33, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[36566, 1081, 328, 5, 27, "Output",
+Cell[37187, 1094, 328, 5, 27, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[36897, 1088, 665, 17, 33, "Input",
+Cell[37518, 1101, 665, 17, 33, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[37565, 1107, 803, 23, 137, "Output",
+Cell[38186, 1120, 803, 23, 137, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[38371, 1132, 413, 11, 33, "Input",
+Cell[38992, 1145, 413, 11, 33, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[38787, 1145, 2297, 71, 113, "Output",
+Cell[39408, 1158, 2297, 71, 113, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[41087, 1218, 630, 17, 33, "Input",
+Cell[41708, 1231, 630, 17, 33, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[41720, 1237, 5094, 135, 257, "Output",
+Cell[42341, 1250, 5094, 135, 257, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[46817, 1374, 341, 8, 33, "Input",
+Cell[47438, 1387, 341, 8, 33, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[47161, 1384, 209, 4, 27, "Output",
+Cell[47782, 1397, 209, 4, 27, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[47373, 1390, 185, 3, 27, "Input",
+Cell[47994, 1403, 185, 3, 27, "Input",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}],
-Cell[47561, 1395, 216, 3, 30, "Output",
+Cell[48182, 1408, 216, 3, 30, "Output",
  CellGroupingRules->{GroupTogetherGrouping, 10000.}]
 }, Open  ]]
 }, Closed]]
