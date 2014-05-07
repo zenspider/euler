@@ -1,0 +1,82 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1881,         72]
+NotebookOptionsPosition[      1449,         51]
+NotebookOutlinePosition[      1805,         67]
+CellTagsIndexPosition[      1762,         64]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 10", "Subsection",
+ CellChangeTimes->{{3.5290076321157417`*^9, 3.529007652353641*^9}}],
+
+Cell["\<\
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.\
+\>", "Text",
+ CellChangeTimes->{{3.5290369091538363`*^9, 3.5290369102035093`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Prime", "[", "n", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", 
+      RowBox[{"PrimePi", "[", "2000000", "]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5290369576821613`*^9, 3.5290369960630608`*^9}, {
+  3.529037207439825*^9, 3.529037221757656*^9}}],
+
+Cell[BoxData["142913828922"], "Output",
+ CellChangeTimes->{{3.529036962247757*^9, 3.529036996404097*^9}, {
+  3.5290372109976473`*^9, 3.529037224222389*^9}}]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{36, Automatic}, {16, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 100, 1, 44, "Subsection"],
+Cell[682, 25, 198, 5, 68, "Text"],
+Cell[CellGroupData[{
+Cell[905, 34, 357, 9, 28, "Input"],
+Cell[1265, 45, 156, 2, 27, "Output"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

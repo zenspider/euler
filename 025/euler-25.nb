@@ -1,0 +1,111 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2436,        101]
+NotebookOptionsPosition[      2001,         80]
+NotebookOutlinePosition[      2357,         96]
+CellTagsIndexPosition[      2314,         93]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 25", "Subsection",
+ CellChangeTimes->{{3.529007671044882*^9, 3.529007672197236*^9}, 
+   3.529041741667473*^9}],
+
+Cell["\<\
+The Fibonacci sequence is defined by the recurrence relation:
+
+Fn = Fn1 + Fn2, where F1 = 1 and F2 = 1.
+Hence the first 12 terms will be:
+
+F1 = 1
+F2 = 1
+F3 = 2
+F4 = 3
+F5 = 5
+F6 = 8
+F7 = 13
+F8 = 21
+F9 = 34
+F10 = 55
+F11 = 89
+F12 = 144
+The 12th term, F12, is the first term to contain three digits.
+
+What is the first term in the Fibonacci sequence to contain 1000 digits?\
+\>", "Text",
+ CellChangeTimes->{{3.529041752542281*^9, 3.5290417540513144`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", "=", "0"}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"Do", "[", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Length", "[", 
+          RowBox[{"IntegerDigits", "[", 
+           RowBox[{"Fibonacci", "[", "n", "]"}], "]"}], "]"}], 
+         "\[GreaterEqual]", "1000"}], ",", 
+        RowBox[{
+         RowBox[{"a", "=", "n"}], ";", 
+         RowBox[{"Break", "[", "]"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "10000"}], "}"}]}], "]"}], ";", "a"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.52904181124986*^9, 3.529041883529971*^9}}],
+
+Cell[BoxData["4782"], "Output",
+ CellChangeTimes->{{3.529041841765162*^9, 3.529041884093335*^9}}]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{84, Automatic}, {16, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 124, 2, 44, "Subsection"],
+Cell[706, 26, 461, 22, 391, "Text"],
+Cell[CellGroupData[{
+Cell[1192, 52, 681, 21, 46, "Input"],
+Cell[1876, 75, 97, 1, 27, "Output"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

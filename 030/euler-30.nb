@@ -1,0 +1,196 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5309,        186]
+NotebookOptionsPosition[      4723,        160]
+NotebookOutlinePosition[      5080,        176]
+CellTagsIndexPosition[      5037,        173]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 30", "Subsection",
+ CellChangeTimes->{{3.529007685218294*^9, 3.529007686106101*^9}}],
+
+Cell[TextData[{
+ "Surprisingly there are only three numbers that can be written as the sum of \
+fourth powers of their digits:\n\n1634 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["1", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["6", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["3", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["4", "4"], TraditionalForm]]],
+ "\n8208 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["8", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["0", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["8", "4"], TraditionalForm]]],
+ "\n9474 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["9", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["4", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["7", "4"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["4", "4"], TraditionalForm]]],
+ "\nAs 1 = ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["1", "4"], TraditionalForm]]],
+ " is not a sum it is not included.\n\nThe sum of these numbers is 1634 + \
+8208 + 9474 = 19316.\n\nFind the sum of all the numbers that can be written \
+as the sum of fifth powers of their digits."
+}], "Text",
+ CellChangeTimes->{{3.529027010929098*^9, 3.529027135769783*^9}, {
+  3.5292596230287867`*^9, 3.5292596242414713`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"Complement", "[", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"Range", "@", 
+       RowBox[{"Total", "@", 
+        SuperscriptBox[
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", "9"}], "]"}], "4"]}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Total", "@", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["#", "4"], "&"}], ",", 
+           RowBox[{"IntegerDigits", "[", "#", "]"}]}], "]"}]}], "\[Equal]", 
+        "#"}], "&"}]}], "]"}], ",", 
+    RowBox[{"{", "1", "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.529259694639461*^9, 3.529259799497291*^9}, {
+  3.52925984183707*^9, 3.529259841919807*^9}, {3.529259947757402*^9, 
+  3.529259985464265*^9}, {3.529260096203776*^9, 3.529260097713234*^9}}],
+
+Cell[BoxData["19316"], "Output",
+ CellChangeTimes->{{3.529259968671653*^9, 3.529259988068656*^9}, 
+   3.529260058977903*^9, 3.529260104421524*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"Complement", "[", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"Range", "@", 
+       RowBox[{"(", 
+        RowBox[{"5", "*", 
+         SuperscriptBox["9", "5"]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Total", "@", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["#", "5"], "&"}], ",", 
+           RowBox[{"IntegerDigits", "[", "#", "]"}]}], "]"}]}], "\[Equal]", 
+        "#"}], "&"}]}], "]"}], ",", 
+    RowBox[{"{", "1", "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.529259694639461*^9, 3.529259799497291*^9}, {
+   3.52925984183707*^9, 3.529259841919807*^9}, 3.529259947757402*^9, {
+   3.5292600012596292`*^9, 3.5292600411956463`*^9}, 3.529260093752451*^9, 
+   3.529260312680767*^9}],
+
+Cell[BoxData["443839"], "Output",
+ CellChangeTimes->{
+  3.529259697621314*^9, 3.5292597557768507`*^9, {3.529259788771554*^9, 
+   3.529259800676072*^9}, {3.5292598375968246`*^9, 3.529259842769022*^9}, 
+   3.529259901518901*^9, {3.529260010398838*^9, 3.529260061822482*^9}, 
+   3.529260107296645*^9, 3.5292603233540897`*^9}]
+}, Open  ]],
+
+Cell["\<\
+This is a bit of a cheat... The upper bound that I originally picked missed \
+the last number as that had multiple 9\[CloseCurlyQuote]s in it.\
+\>", "Text",
+ CellChangeTimes->{{3.5292603234404297`*^9, 3.529260347178811*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{116, Automatic}, {Automatic, 44}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 98, 1, 44, "Subsection"],
+Cell[680, 25, 1558, 59, 224, "Text"],
+Cell[CellGroupData[{
+Cell[2263, 88, 849, 23, 74, "Input"],
+Cell[3115, 113, 146, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3298, 120, 835, 23, 52, "Input"],
+Cell[4136, 145, 322, 5, 28, "Output"]
+}, Open  ]],
+Cell[4473, 153, 234, 4, 49, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,109 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3394,         99]
+NotebookOptionsPosition[      2960,         78]
+NotebookOutlinePosition[      3316,         94]
+CellTagsIndexPosition[      3273,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 8", "Subsection",
+ CellChangeTimes->{{3.529007660758906*^9, 3.52900766554265*^9}}],
+
+Cell["\<\
+Find the greatest product of five consecutive digits in the 1000-digit number:\
+\>", "Text",
+ CellChangeTimes->{
+  3.52903921420015*^9, 3.5290393306805553`*^9, {3.529040273175346*^9, 
+   3.5290402758616667`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{
+   "IntegerDigits", "[", 
+    "7316717653133062491922511967442657474235534919493496983520312774506326239\
+578318016984801869478851843858615607891129494954595017379583319528532088055111\
+254069874715852386305071569329096329522744304355766896648950445244523161731856\
+403098711121722383113622298934233803081353362766142828064444866452387493035890\
+729629049156044077239071381051585930796086670172427121883998797908792274921901\
+699720888093776657273330010533678812202354218097512545405947522435258490771167\
+055601360483958644670632441572215539753697817977846174064955149290862569321978\
+468622482839722413756570560574902614079729686524145351004748216637048440319989\
+000889524345065854122758866688116427171479924442928230863465674813919123162824\
+586178664583591245665294765456828489128831426076900422421902267105562632111110\
+937054421750694165896040807198403850962455444362981230987879927244284909188845\
+801561660979191338754992005240636899125607176060588611646710940507754100225698\
+315520005593572972571636269561882670428252483600823257530420752963450", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Times", "@@", 
+     RowBox[{"a", "[", 
+      RowBox[{"[", 
+       RowBox[{"Range", "[", 
+        RowBox[{"i", ",", 
+         RowBox[{"i", "+", "4"}]}], "]"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{
+       RowBox[{"Length", "[", "a", "]"}], "-", "4"}]}], "}"}]}], "]"}], " ", "//",
+   " ", "Max"}]}], "Input",
+ CellChangeTimes->{{3.529039333195154*^9, 3.5290393520793123`*^9}, {
+  3.5290395181229277`*^9, 3.529039518591806*^9}, {3.5290399963473463`*^9, 
+  3.5290401699591713`*^9}, {3.529040219168457*^9, 3.5290402435934477`*^9}, {
+  3.52904028629125*^9, 3.5290403253694*^9}}],
+
+Cell[BoxData["40824"], "Output",
+ CellChangeTimes->{{3.529040108345282*^9, 3.529040170833769*^9}, 
+   3.529040248003683*^9, {3.52904029088411*^9, 3.529040327584319*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{68, Automatic}, {Automatic, 44}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 96, 1, 44, "Subsection"],
+Cell[678, 25, 222, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[925, 34, 1835, 36, 335, "Input"],
+Cell[2763, 72, 169, 2, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

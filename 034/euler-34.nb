@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4602,        155]
+NotebookOptionsPosition[      3841,        122]
+NotebookOutlinePosition[      4198,        138]
+CellTagsIndexPosition[      4155,        135]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 34", "Subsection",
+ CellChangeTimes->{{3.529007687099066*^9, 3.529007688058495*^9}}],
+
+Cell["\<\
+145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
+
+Find the sum of all numbers which are equal to the sum of the factorial of \
+their digits.
+
+Note: as 1! = 1 and 2! = 2 are not sums they are not included.\
+\>", "Text",
+ CellChangeTimes->{{3.529026840636858*^9, 3.529026843269494*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"5", "*", 
+  RowBox[{"Total", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"0", ",", "9"}], "]"}], "!"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.529260577689124*^9, 3.529260580234489*^9}, {
+  3.5298908341032057`*^9, 3.5298908402705383`*^9}, {3.529890916026513*^9, 
+  3.52989093066073*^9}, {3.5298909635957537`*^9, 3.529890993042368*^9}}],
+
+Cell[BoxData["2045570"], "Output",
+ CellChangeTimes->{{3.52989092808189*^9, 3.529890930909647*^9}, {
+  3.529890964610124*^9, 3.529890993427051*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"curious", "[", "n_", "]"}], " ", ":=", " ", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Total", "[", 
+      RowBox[{
+       RowBox[{"IntegerDigits", "[", "n", "]"}], "!"}], "]"}], " ", 
+     "\[Equal]", " ", "n"}], ",", " ", "n", ",", " ", "0"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"curious", "[", "145", "]"}], "\[Equal]", "145"}]}], "Input",
+ CellChangeTimes->{{3.529890078175788*^9, 3.529890207426202*^9}, {
+  3.5298903033852663`*^9, 3.529890303612672*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.5298905216096354`*^9, 3.5298905508772497`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"n", "=", "3"}], "50000"], 
+   RowBox[{"curious", "[", "n", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.529890329218824*^9, 3.529890360019906*^9}, {
+  3.529891131634355*^9, 3.529891182548983*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.9504939999999351`", ",", "40730"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.529890342127684*^9, 3.529890403820112*^9, {3.5298911479793663`*^9, 
+   3.5298911862604523`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "@", 
+  RowBox[{"Total", "@", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Range", "[", 
+      RowBox[{"3", ",", "50000"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"curious", "[", "#", "]"}], " ", "\[Equal]", "#"}], "&"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5298904751912813`*^9, 3.529890593014998*^9}, {
+  3.529890640246008*^9, 3.5298906428854513`*^9}, {3.529890726284416*^9, 
+  3.529890728667089*^9}, {3.52989080610709*^9, 3.529890810640502*^9}, {
+  3.529890999315514*^9, 3.529891003658708*^9}, {3.5298910971384773`*^9, 
+  3.5298911159275293`*^9}, {3.529891157734541*^9, 3.529891159430296*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.8961050000000341`", ",", "40730"}], "}"}]], "Output",
+ CellChangeTimes->{{3.5298905079594193`*^9, 3.529890601150025*^9}, 
+   3.529890696865632*^9, 3.529890781518364*^9, 3.529890897699109*^9, {
+   3.529891107320199*^9, 3.5298911170632544`*^9}, {3.529891169672193*^9, 
+   3.529891187226561*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{124, Automatic}, {36, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 98, 1, 44, "Subsection"],
+Cell[680, 25, 308, 8, 106, "Text"],
+Cell[CellGroupData[{
+Cell[1013, 37, 375, 8, 28, "Input"],
+Cell[1391, 47, 148, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1576, 54, 536, 14, 46, "Input"],
+Cell[2115, 70, 101, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2253, 76, 295, 7, 57, "Input"],
+Cell[2551, 85, 216, 5, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2804, 95, 671, 15, 28, "Input"],
+Cell[3478, 112, 335, 6, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

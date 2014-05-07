@@ -1,0 +1,144 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4583,        134]
+NotebookOptionsPosition[      4107,        112]
+NotebookOutlinePosition[      4464,        128]
+CellTagsIndexPosition[      4421,        125]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 23", "Subsection",
+ CellChangeTimes->{{3.529007683226692*^9, 3.5290076842587223`*^9}}],
+
+Cell["\<\
+A perfect number is a number for which the sum of its proper divisors is \
+exactly equal to the number. For example, the sum of the proper divisors of \
+28 would be 1 + 2 + 4 + 7 + 14 = 28, which means that 28 is a perfect number.
+
+A number n is called deficient if the sum of its proper divisors is less than \
+n and it is called abundant if this sum exceeds n.
+
+As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest \
+number that can be written as the sum of two abundant numbers is 24. By \
+mathematical analysis, it can be shown that all integers greater than 28123 \
+can be written as the sum of two abundant numbers. However, this upper limit \
+cannot be reduced any further by analysis even though it is known that the \
+greatest number that cannot be expressed as the sum of two abundant numbers \
+is less than this limit.
+
+Find the sum of all the positive integers which cannot be written as the sum \
+of two abundant numbers.\
+\>", "Text",
+ CellChangeTimes->{{3.529257494798469*^9, 3.5292574953828287`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"r", "=", 
+   RowBox[{"Range", "[", "28124", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"r", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Total", "@", 
+        RowBox[{"Divisors", "[", "#", "]"}]}], ">", 
+       RowBox[{"#", "*", "2"}]}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"l", "=", 
+    RowBox[{"Length", "@", "a"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"While", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Length", "[", "a", "]"}], ">", "1"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"n", "=", 
+       RowBox[{"First", "@", "a"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"a", "=", 
+       RowBox[{"Rest", "@", "a"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"r", "=", 
+       RowBox[{"Complement", "[", 
+        RowBox[{"r", ",", 
+         RowBox[{"n", "+", "a"}]}], "]"}]}]}]}], "\[IndentingNewLine]", "]"}],
+    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Total", "@", "r"}]}], "Input",
+ CellChangeTimes->{{3.529257512206526*^9, 3.529257553850699*^9}, {
+   3.529257612265037*^9, 3.52925769424893*^9}, {3.529258024538372*^9, 
+   3.5292580422069893`*^9}, {3.529258102340163*^9, 3.529258102859791*^9}, {
+   3.529258203736027*^9, 3.5292582096464653`*^9}, {3.5292582427047663`*^9, 
+   3.5292584474953737`*^9}, {3.529258522489355*^9, 3.529258555128421*^9}, {
+   3.5292585883520308`*^9, 3.529258592152532*^9}, {3.529258654015395*^9, 
+   3.529258765325458*^9}, 3.529258869844968*^9, {3.5292589082393837`*^9, 
+   3.529258917505909*^9}, {3.5292589479050217`*^9, 3.529258955493876*^9}, {
+   3.529259011906147*^9, 3.529259065382024*^9}, 3.529259141942387*^9, {
+   3.529259183681658*^9, 3.529259245162747*^9}, {3.529259281758699*^9, 
+   3.5292592934353523`*^9}, {3.529259403298071*^9, 3.529259404199971*^9}}],
+
+Cell[BoxData["4179935"], "Output",
+ CellChangeTimes->{3.5292594106601133`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "This is ",
+ StyleBox["wrong.",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " It is off by 64. I need to figure out why, but I\[CloseCurlyQuote]m close \
+enough for now."
+}], "Text",
+ CellChangeTimes->{{3.529259413812228*^9, 3.529259427185128*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{108, Automatic}, {Automatic, 24}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 100, 1, 44, "Subsection"],
+Cell[682, 25, 1049, 19, 296, "Text"],
+Cell[CellGroupData[{
+Cell[1756, 48, 1971, 47, 199, "Input"],
+Cell[3730, 97, 78, 1, 28, "Output"]
+}, Open  ]],
+Cell[3823, 101, 268, 8, 30, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1622,         65]
+NotebookOptionsPosition[      1192,         44]
+NotebookOutlinePosition[      1548,         60]
+CellTagsIndexPosition[      1505,         57]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 7", "Subsection",
+ CellChangeTimes->{{3.529007626566733*^9, 3.529007652352048*^9}}],
+
+Cell["\<\
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see \
+that the 6th prime is 13.
+
+What is the 10 001st prime number?\
+\>", "Text",
+ CellChangeTimes->{{3.529036875612877*^9, 3.529036876489593*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Prime", "[", "10001", "]"}]], "Input",
+ CellChangeTimes->{{3.529036880543331*^9, 3.5290368897294693`*^9}}],
+
+Cell[BoxData["104743"], "Output",
+ CellChangeTimes->{{3.529036885638047*^9, 3.529036890303631*^9}}]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{28, Automatic}, {36, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 97, 1, 44, "Subsection"],
+Cell[679, 25, 228, 6, 68, "Text"],
+Cell[CellGroupData[{
+Cell[932, 35, 130, 2, 28, "Input"],
+Cell[1065, 39, 99, 1, 27, "Output"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

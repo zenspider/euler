@@ -1,0 +1,82 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1820,         72]
+NotebookOptionsPosition[      1387,         51]
+NotebookOutlinePosition[      1743,         67]
+CellTagsIndexPosition[      1700,         64]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 16", "Subsection",
+ CellChangeTimes->{{3.529007636431727*^9, 3.5290076523546667`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "15"], TraditionalForm]]],
+ " = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.\n\nWhat is \
+the sum of the digits of the number ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "1000"], TraditionalForm]]],
+ "?"
+}], "Text",
+ CellChangeTimes->{{3.529037265501154*^9, 3.529037291380353*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@", 
+  RowBox[{"IntegerDigits", "@", 
+   SuperscriptBox["2", "1000"]}]}]], "Input",
+ CellChangeTimes->{{3.529037299243443*^9, 3.529037344134959*^9}}],
+
+Cell[BoxData["1366"], "Output",
+ CellChangeTimes->{{3.5290373175527563`*^9, 3.529037344518137*^9}}]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{44, Automatic}, {-4, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 100, 1, 44, "Subsection"],
+Cell[682, 25, 368, 11, 72, "Text"],
+Cell[CellGroupData[{
+Cell[1075, 40, 182, 4, 32, "Input"],
+Cell[1260, 46, 99, 1, 27, "Output"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

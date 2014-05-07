@@ -1,0 +1,174 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5220,        164]
+NotebookOptionsPosition[      4671,        139]
+NotebookOutlinePosition[      5027,        155]
+CellTagsIndexPosition[      4984,        152]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 14", "Subsection",
+ CellChangeTimes->{{3.5290076756120977`*^9, 3.529007676963826*^9}}],
+
+Cell["\<\
+The following iterative sequence is defined for the set of positive integers:
+
+n  n/2 (n is even)
+n  3n + 1 (n is odd)
+
+Using the rule above and starting with 13, we generate the following sequence:
+
+13  40  20  10  5  16  8  4  2  1
+It can be seen that this sequence (starting at 13 and finishing at 1) \
+contains 10 terms. Although it has not been proved yet (Collatz Problem), it \
+is thought that all starting numbers finish at 1.
+
+Which starting number, under one million, produces the longest chain?
+
+NOTE: Once the chain starts the terms are allowed to go above one million.\
+\>", "Text",
+ CellChangeTimes->{{3.52919098717346*^9, 3.529190988352957*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "CollatzLength2", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"collatz", "[", "1", "]"}], "=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"collatz", "[", 
+   RowBox[{"n_", "?", "EvenQ"}], "]"}], ":=", 
+  RowBox[{"n", "/", "2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"collatz", "[", 
+    RowBox[{"n_", "?", "OddQ"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"3", "n"}], "+", "1"}]}], " ", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CollatzLength", "[", "1", "]"}], ":=", 
+  "1"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"CollatzLength", "[", "n_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"$RecursionLimit", "=", "\[Infinity]"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CollatzLength", "[", "n", "]"}], "=", 
+      RowBox[{"1", "+", 
+       RowBox[{"CollatzLength", "[", 
+        RowBox[{"collatz", "[", "n", "]"}], "]"}]}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"collatz", "[", "13", "]"}], "\[Equal]", "40"}], " ", "\[And]", 
+  " ", 
+  RowBox[{
+   RowBox[{"collatz", "[", "10", "]"}], "\[Equal]", "5"}], "\[And]", 
+  RowBox[{
+   RowBox[{"CollatzLength", "[", "13", "]"}], "\[Equal]", "10"}]}]}], "Input",\
+
+ CellChangeTimes->{{3.5291909983568563`*^9, 3.5291910246835327`*^9}, {
+  3.529191175906948*^9, 3.529191291360931*^9}, {3.5291916405545673`*^9, 
+  3.5291916471130247`*^9}, {3.529192250332472*^9, 3.529192261439765*^9}, {
+  3.5291929299478893`*^9, 3.5291929356236353`*^9}, {3.529193445440777*^9, 
+  3.529193516417033*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.5291914105430593`*^9, 3.529191428259709*^9}, 
+   3.529191650521358*^9, 3.529192413161134*^9, {3.529192474883278*^9, 
+   3.5291925320206423`*^9}, 3.529192598534174*^9, 3.529192993023469*^9, 
+   3.529193290076687*^9, {3.529193344393598*^9, 3.529193369141823*^9}, 
+   3.529193479926262*^9, 3.5291935391590977`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Monitor", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"CollatzLength", "[", "n", "]"}], ",", "n"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", 
+          RowBox[{"Range", "[", "999999", "]"}]}], "}"}]}], "]"}], ",", "n"}],
+      "]"}], "//", "Sort"}], "//", "Last"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5291914520440702`*^9, 3.529191455908246*^9}, {
+   3.52919151689917*^9, 3.529191572704811*^9}, {3.529191666195198*^9, 
+   3.5291916730583477`*^9}, 3.52919242029803*^9, {3.529192554715909*^9, 
+   3.5291925562811003`*^9}, {3.529192680529758*^9, 3.529192729215357*^9}, {
+   3.529192907847527*^9, 3.529192919164443*^9}, 3.529193292886958*^9, 
+   3.529193518313375*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"35.925635`", ",", 
+   RowBox[{"{", 
+    RowBox[{"525", ",", "837799"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.52919305231945*^9, 3.529193327691867*^9, 
+  3.5291934119654417`*^9, 3.5291935240426397`*^9, 3.529193576943233*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{92, Automatic}, {-4, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 100, 1, 44, "Subsection"],
+Cell[682, 25, 670, 17, 277, "Text"],
+Cell[CellGroupData[{
+Cell[1377, 46, 1741, 49, 199, "Input"],
+Cell[3121, 97, 365, 5, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3523, 107, 843, 20, 46, "Input"],
+Cell[4369, 129, 274, 6, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,125 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3410,        115]
+NotebookOptionsPosition[      2866,         90]
+NotebookOutlinePosition[      3222,        106]
+CellTagsIndexPosition[      3179,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 6", "Subsection",
+ CellChangeTimes->{{3.529007615703158*^9, 3.529007616799574*^9}}],
+
+Cell[TextData[{
+ "The sum of the squares of the first ten natural numbers is,\n\n",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["1", "2"], TraditionalForm]]],
+ " + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["2", "2"], TraditionalForm]]],
+ " + ... + ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", "2"], TraditionalForm]]],
+ " = 385\nThe square of the sum of the first ten natural numbers is,\n\n(1 + \
+2 + ... + 10)2 = 552 = 3025\nHence the difference between the sum of the \
+squares of the first ten natural numbers and the square of the sum is 3025  \
+385 = 2640.\n\nFind the difference between the sum of the squares of the \
+first one hundred natural numbers and the square of the sum."
+}], "Text",
+ CellChangeTimes->{{3.529036482124041*^9, 3.529036484290285*^9}, {
+  3.5290365613159227`*^9, 3.529036571929846*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"Total", "@", 
+     RowBox[{"Range", "[", "100", "]"}]}], ")"}], "2"], "-", 
+  RowBox[{"Total", "@", 
+   SuperscriptBox[
+    RowBox[{"Range", "[", "100", "]"}], "2"]}]}]], "Input",
+ CellChangeTimes->{{3.529036500412395*^9, 3.529036500828658*^9}, {
+  3.52903657770745*^9, 3.5290366588535*^9}, {3.529036706860664*^9, 
+  3.529036729848361*^9}, {3.529036833477954*^9, 3.529036855176462*^9}}],
+
+Cell[BoxData["25164150"], "Output",
+ CellChangeTimes->{{3.529036601953474*^9, 3.5290366080692*^9}, {
+  3.5290366511466*^9, 3.529036659530079*^9}, {3.529036710090002*^9, 
+  3.529036730385912*^9}, {3.5290368349917717`*^9, 3.529036861304538*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", "=", 
+     RowBox[{"Range", "[", "100", "]"}]}], "}"}], ",", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"Total", "[", "a", "]"}], "2"], "-", 
+    RowBox[{"Total", "[", 
+     SuperscriptBox["a", "2"], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5290367466417913`*^9, 3.529036796682988*^9}, {
+  3.529036830407341*^9, 3.52903685806816*^9}}],
+
+Cell[BoxData["25164150"], "Output",
+ CellChangeTimes->{
+  3.5290367974001503`*^9, {3.5290368369897118`*^9, 3.5290368596266937`*^9}}]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 97, 1, 44, "Subsection"],
+Cell[679, 25, 829, 20, 222, "Text"],
+Cell[CellGroupData[{
+Cell[1533, 49, 458, 11, 32, "Input"],
+Cell[1994, 62, 243, 3, 27, "Output"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2274, 70, 429, 12, 29, "Input"],
+Cell[2706, 84, 132, 2, 27, "Output"]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
