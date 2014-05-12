@@ -21,3 +21,9 @@ Dir["???"].each do |f|
     end
   end
 end
+
+math = "/MyApplications/Mathematica.app/Contents/MacOS/MathKernel"
+
+task :export do
+  system %(echo 'With[{dir = "/Users/ryan/Work/git/euler/"}, Export[dir <> "Euler.m", Import[dir <> "Euler.nb", {"NB", "Plaintext"}], "Text"]]' | '#{math}' -noprompt)
+end
