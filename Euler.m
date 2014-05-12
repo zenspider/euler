@@ -124,6 +124,14 @@ AbsoluteTiming@Total@Select[Prime[Range[5, PrimePi[1000000]]], With[{n = #}, all
 
 {4.13830000000000008952838470577262341976`6.637421884293227, 748317}
 
+Holy fuck this is fast (from forums):
+
+f[a_, b_]:=Select[Apply[Plus, Tuples[{#1 a, b^#2 Range[9]}], {1}], PrimeQ]&
+g[x__, n_]:=Join@@Drop[FoldList[f[x], {0}, Range[0, n]], 2]
+AbsoluteTiming@Tr[g[1, 10, 5]⋂g[10, 1, 5]]
+
+{0.0042189999999999996602162433134708408`3.645809438661505, 748317}
+
 Problem 38 (done)
 
 Take the number 192 and multiply it by each of 1, 2, and 3:
